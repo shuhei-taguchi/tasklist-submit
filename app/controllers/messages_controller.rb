@@ -46,11 +46,10 @@ class MessagesController < ApplicationController
     flash[:success] = 'Message は正常に削除されました'
     redirect_to messages_url
   end
-end
 
   private
 
-  # Strong Parameter
   def message_params
     params.require(:message).permit(:content)
   end
+end
